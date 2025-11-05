@@ -32,7 +32,6 @@ interface SheetRow {
   Timestamp: string;
   FullName: string;
   PhoneNumber: string;
-  Union: string;
   Constituency: string;
   PartyRole: string;
   [key: string]: any;
@@ -52,7 +51,6 @@ export default function AdminTable({ initialData }: AdminTableProps) {
         'Timestamp',
         'FullName',
         'PhoneNumber',
-        'Union',
         'Constituency',
         'PartyRole',
       ];
@@ -118,7 +116,7 @@ export default function AdminTable({ initialData }: AdminTableProps) {
               <Search className="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="பெயர், தொலைபேசி, ஒன்றியம் மூலம் தேடவும்..."
+                placeholder="பெயர், தொலைபேசி மூலம் தேடவும்..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-8 w-full"
